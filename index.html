@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    <title>Resumé</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+    /* * {
+     box-sizing: border-box;
+    } */
+
+    body {
+
+        background-color: white;
+        font-family: Lora, serif;
+
+    }
+        
+    .dropbtn {
+            
+        background-color: #00dbdf;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 25px;
+        z-index: 1;
+        margin-right: 10px;
+
+    }
+
+    .dropdown {
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        margin-right: 10px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #00cbce;
+    }
+
+    #resumeheader {
+        text-align: center;
+        margin: auto;
+    }
+
+    ul li{
+        list-style-type: circle;
+    }
+
+    #namediv {
+        height: auto;
+        width: auto;
+        position: relative;
+        z-index: -1;
+        /* outline-style: dotted;
+        outline-width: 3px;
+        outline-color: rgb(41, 41, 41);
+        outline-offset: 5px;
+        margin: 20px 10px; */
+        /* border: 1px double black;
+        border-width: 10px;
+        border-radius: 50%; */
+    }
+    
+    h1 {
+
+        font-family: Ubuntu, sans-serif;
+        /* font-family: "Times New Roman", Times, serif; */
+        /* font-family: Merriweather, serif; */
+        /* font-size: 6vw; */
+        /* text-shadow: 2px 2px 4px #00000062; */
+        z-index: -1;
+
+    }
+
+
+    .dropdownimg {
+     position: relative;
+     display: inline-block;
+    }
+
+    .dropdown-contentimg {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .dropdownimgclass {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 1;
+    }
+
+    .dropdownimg:hover .dropdown-contentimg {
+     display: block;
+    }
+
+    .descimg {
+        padding: 10px;
+        text-align: center;
+    }
+
+    hr {
+        border: 1px dashed #00dbdf;
+    }
+
+    h2 {
+        text-align: left;
+        border-bottom: 2px dashed #00dbdf;
+        padding-bottom: 5px;
+        font-family: Ubuntu, sans-serif;
+
+    }
+
+    #prosum {
+        /* margin: 25px 50px 10px 50px; */
+        /* padding: 5px 10px; */
+        /* outline-style: inset;
+        outline-color: grey;
+        outline-offset: 2px; */
+        background-color: rgb(242, 242, 242);;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: 1px solid lightgrey;
+    
+    }
+
+    p.prosump {
+
+        text-align: justify;
+        border: 1px dashed #00dbdf;
+        border-radius: 10px;
+        padding: 6px;
+        margin-left: 20px;
+        margin-right: 20px;
+    
+
+    }
+
+    div.skillscontainer {
+        text-align: center;
+        /* background-color: lightgrey; */
+        /* margin: 10px 80px; */
+        /* margin-left: 50px;
+        margin-right: 50px;
+        border: 1px dashed #00dbdf;
+        border-radius: 10px; */
+        padding-bottom: 10px;
+        background-color: rgb(242, 242, 242);
+        border-radius: 10px;
+        border: 1px solid lightgrey;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    ul.skillsul {
+        
+        display: inline-block;
+        text-align: left;
+        /* background-color: yellow; */
+        border: 1px dashed #00dbdf;
+        padding: 10px 30px;
+        margin-bottom: 5px;
+        border-radius: 10px;
+        
+    }
+
+    .workhistele {
+
+        word-spacing: 2px;
+        /* background-color: red; */
+        text-align: center;
+    }
+
+    ul.workhistul {
+        /* margin-left: 225px; */
+        /* background-color: yellow; */
+        display: inline-block;
+        text-align: left;
+        border: 1px dashed #00dbdf;
+        padding: 10px 25px;
+        border-radius: 10px;
+        margin-left: 50px;
+        margin-right: auto;
+
+       
+    }
+
+    #workhistsection {
+
+        /* margin-left: 100px; */
+        /* background-color: lightgray; */
+        text-align: left;
+        background-color: rgb(242, 242, 242);
+        border-radius: 10px;
+        border: 1px solid lightgrey;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 10px;
+        padding-right: 15px;
+        
+    }
+
+    
+
+    #educontainer {
+        /* background-color: lightgrey; */
+        text-align: center;
+        padding-bottom: 10px;
+        background-color: rgb(242, 242, 242);
+        border-radius: 10px;
+        border: 1px solid lightgrey;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .eduele {
+
+        /* background-color: red; */
+        text-align: center;
+
+    }
+
+    ul.edulist {
+        
+        /* background-color: yellow; */
+        display: inline-block;
+        text-align: left;
+        border: 1px dashed #00dbdf;
+        padding: 10px 25px;
+        border-radius: 10px;
+    }
+
+    table {
+        width: 99%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+        margin-left: 7px;
+        margin-right: 5px;
+    }
+
+    td {
+        width: 99%;
+        border-bottom: 1px solid #ddd;
+        padding: 8px;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    th {
+        
+        background-color: #00dbdf;
+        color: white;
+        border-left: none;
+        border-right: none;
+        width: 99%;
+        border-bottom: 1px solid #ddd;
+        padding: 8px;
+    
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+    
+
+    /* div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid #ddd;
+    background-color: #00dbdf;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 18px;
+    
+    } */
+
+    .headerimg {
+        
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: 1;
+        cursor: zoom-in;
+    }
+
+    .headerimg:hover {
+
+        opacity: .75;
+    } 
+
+    ::marker {
+
+        color:#00dbdf;
+
+    }
+
+    input[type=text],textarea {
+
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        color: rgb(0, 0, 0);
+        border: 1px solid grey;
+        border-radius: 10px;
+        font-family: Lora, serif;
+        max-height: 170px;
+        min-height: 40px;
+        max-width: 100%;
+        min-width: 100%;
+
+    }
+
+    input[type=text]:focus,textarea:focus {
+        
+        border: 3px soilid #00dbdf;
+    
+    }
+
+        input[type=submit] {
+        background-color: #00dbdf;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        /* float: right; */
+        width: 100%;
+        font-family: Ubuntu, sans-serif;
+        margin-top: 10px;
+    
+    }
+
+    div.submitdiv {
+        
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+
+    }
+
+    label {
+
+        font-family: Ubuntu, sans-serif;
+    
+    }
+
+    input[type=submit]:hover {
+
+        background-color: #00cbce;
+
+    }
+
+    .row:after {
+
+        content: "";
+        display: table;
+        clear: both;
+
+    }
+
+    a.emaillink:link {
+
+    color: #00dbdf
+
+    }
+
+    a.emaillink:visited {
+
+    color: #00cbce
+
+    }
+
+    a.emaillink:hover {
+
+    color: #00cbce
+
+    }
+
+    a.emaillink:active {
+
+    color: #00cbce
+    
+    }
+
+    a.phonelink:link {
+
+    color: #00dbdf
+
+    }
+
+    a.phonelink:visited {
+
+    color: #00cbce
+
+    }
+
+    a.phonelink:hover {
+
+    color: #00cbce
+
+    }
+
+    a.phonelink:active {
+
+    color: #00cbce
+
+    }
+
+    .bolderfont {
+        font-weight: 900;
+    }
+
+    .contactformdiv {
+
+        background-color: rgb(242, 242, 242);
+        border-radius: 10px;
+        border: 1px solid lightgrey;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+    }
+
+    footer {
+
+        text-align: center;
+        background-color: #00dbdf;
+        padding: 4px;
+        margin-right: 5px;
+        margin-left: 5px;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        opacity: .5;
+
+    }
+
+    @media screen and (max-width: 1000px) {
+  
+        ul.skillsul {
+
+        display: inline-block;
+        text-align: left;
+        
+        }
+
+     div.skillscontainer {
+        text-align: center;
+        /* background-color: lightgrey; */
+        margin-left: 10px;
+        margin-right: 10px;
+        
+    }
+
+    #prosum {
+        /* margin: auto; */
+        /* padding: 5px 10px; */
+        /* text-align: justify; */
+    }
+
+    ul.workhistul {
+
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    div.workhistelecontainer {
+
+        /* text-align: center; */
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    
+    div.workhistsection {
+        text-align: center;
+    }
+}
+
+        
+ </style>
+        
+
+</head>
+<body>
+      
+    <div id="resumeheader">
+        <div class="dropdown" style="float:right;">
+            <button class="dropbtn fa fa-search"></button>
+            <div class="dropdown-content">
+            <a href="#skillsjump">Skills</a>
+            <a href="#workjump">Work History</a>
+            <a href="#edujump">Education</a>
+            <a href="#contactjump">Contact Me</a>
+            </div>
+          </div>
+    <div id="namediv">
+    <h1>Mark Luber</h1>
+    </div>
+    <div class="dropdownimg"> 
+        <img class="headerimg" src="Resume Images/pexels-pixabay-460031.jpg" alt="Profile Picture">
+        <div class="dropdown-contentimg">
+        <img class="dropdownimgclass" src="Resume Images/pexels-pixabay-460031.jpg" alt="Profile Picture" width="300" height="300">
+        <div class="descimg">Mark Luber</div>
+        </div>
+    </div>
+    <p>Somers Point, NJ 08244</p>
+    <p><a class="phonelink" href="sms:610-312-1136" title="Text Me!">(610) 312-1136</a> - <a class="emaillink" href="mailto:mhluber@mac.com" target="_blank" title="Email Me!">mhluber@mac.com</a></p>
+    <hr>
+    </div>
+
+    <h2>Professional Summary</h2>
+    <div id="prosum">
+    <p class="prosump">Hardworking and reliable team member. Experienced in maintenance, renovation, and masonry work. Versed in completing physically-challenging jobs and working long hours under all types of weather conditions. Respectful, punctual employee who multitasks with ease. Fast and eager to learn new techniques and equipment operation.</p>
+    </div>
+   
+
+    <h2 id="skillsjump">Skills</h2>
+    <div class="skillscontainer">
+    <ul class="skillsul">
+        <li>Respectful, Focused</li>
+        <li>Clean, Courteous</li>
+        <li>Good Work Ethic</li>
+        <li>Hardworking, Motivated</li>
+    </ul>
+    <ul class="skillsul">
+        <li>Detail Oriented</li>
+        <li>Attention to Detail</li>
+        <li>Worksite Safety and Maintenance</li>
+        <li>Heavy Lifting</li>
+    </ul>
+    <ul class="skillsul">
+        <li>Cleaning</li>
+        <li>Basic Math</li>
+        <li>Team Player</li>
+        <li>Hand and Power Tool Operation</li>
+    </ul>
+    <ul class="skillsul">
+        <li>Customer Service</li>
+        <li>Situational Awareness</li>
+        <li>Cement and Masonry work</li>
+        <li>Physical Strength and Stamina</li>
+    </ul>
+    </div>
+
+    <h2 id="workjump">Work History</h2>
+
+<div id="workhistsection">
+
+    <div class="workhistelecontainer">
+
+    <p class="workhistele">07/2022 to Current | <strong class="bolderfont">Construction Worker</strong> -
+        ATOM'S BUILDING AND DESIGN - Pennsylvania
+        </p>
+
+        <ul class="workhistul">
+            <li>Assisted with basic carpentry work such as installing drywall and crown molding.</li>
+            <li>Utilized hammers, saws, squares, levels and fastening devices to complete projects.</li>
+            <li>Loaded, unloaded and moved material to and from storage and production areas.</li>
+            <li>Assisted with successful, time-sensitive renovations of various structures.</li>
+            <li>Brought materials and tools from trucks and storage facilities to work site locations and organized for expected needs.</li>
+            <li>Gathered and disposed of worksite debris to remove safety hazards.</li>
+        </ul>
+    
+        <p class="workhistele">07/2020 to 01/2021 |<strong class="bolderfont">Chimney Technician</strong> - Tony's Chimney Care - Downingtown, PA</p>
+
+        <ul class="workhistul">
+            <li>Specialized in stucco and masonry repair</li>
+            <li>Built custom stucco, concrete, and stone chimneys & fireplaces</li>
+            <li>Provided mortar repair, chimney relines & repairs, stucco & masonry repair</li>
+            <li>Brick & stone pointing and replacement to repair the joints of brickwork</li>
+            <li>Inspected, cleaned, serviced, repaired, and appraised chimneys.</li>
+            <li>Installed and inspected, and replaced new chimney caps as well as chimney liners</li>
+            <li>Installed concrete chimney crowns to protect chimney from debris</li>
+            <li>Performed regular chimney sweepings, cleaned flues to remove creosote buildup</li>
+            <li>Provided maintenance on wood stoves, fireplaces, gas fireplace inserts, brick chimneys, and stone chimneys.</li>
+            <li>Performed duties in accordance with applicable standards, policies and regulatory guidelines to promote safe working environment.</li>
+        </ul>
+       
+        <p class="workhistele">09/2017 to 07/2019 | <strong class="bolderont">Juice Maker, Computer Troubleshooting, Maintenance</strong> - Juice Maker, Computer Troubleshooting, Maintenance Juice Dr - Ardmore, PA</p>
+
+        <ul class="workhistul">
+            <li>X1 Commercial cold press juicer maintenance and operation</li>
+            <li>Calibrated equipment to optimize performance.</li>
+            <li>Maintained and managed social media accounts and website</li>
+            <li>Computer & printer troubleshooting, Label printer troubleshooting</li>
+            <li>Worked flexible hours; night, weekend, and holiday shifts.</li>
+            <li>Worked with building manager to assess ongoing needs and plan preventive maintenance and cleaning schedules.</li>
+            <li>Assisted with filling orders for customers, preparing and washing fruit, and mixing juice</li>
+            <li>Completed daily, weekly and monthly checklists on building equipment to maintain records of scheduled maintenance procedures.
+                Commercial delivery</li>
+        </ul>
+
+        <p class="workhistele">9/2016 to 08/2017 | <strong class="bolderont">Computer Assistant</strong> - J & M Arts - Bryn Mawr, PA</p>
+
+        <ul class="workhistul">
+           <li>Configured software, maintained and organized files</li>
+           <li>Monitored and troubleshooted computer systems</li>
+           <li>Recommended network security standards and upgrades to management</li>
+           <li>Assisted with moving and organizing art</li>
+        </ul>
+
+        <p class="workhistele">10/2015 to 02/2016 | <strong class="bolderont">Delivery Driver</strong> - Toni Roni's - Drexel Hill, PA</p>
+
+        <ul class="workhistul">
+          <li>Completed on-time deliveries by choosing best and most efficient routes.</li>
+          <li>Operated vehicle safely in highly congested areas with no traffic violations.</li>
+          <li>Completed rush deliveries on tight timetables to satisfy customer needs.</li>
+          <li>Delivered packages to customer doorsteps and business offices.</li>
+          <li>Communicated customer complaints, requests and feedback to company management for swift resolution.</li>
+          <li>Fostered positive working relationships with regular customers.</li>
+        </ul>
+
+        <p class="workhistele">09/2014 to 02/2015 | <strong class="bolderont">Maintenance Man</strong> - The Galman Group - Dupont Towers Condominiums; Jenkintown, PA</p>
+
+        <ul class="workhistul">
+           <li>Assisted with general maintenance (Windows, Painting, Bathroom, Drains, Sink, AC/ Heating) throughout building and condominiums</li>
+           <li>Assisted with renovations</li>
+           <li>Followed work orders and specifications for machine and equipment replacement, repair or maintenance.</li>
+           <li>Did daily maintenace work such as uncloging drains, fixing windows, and fixing leaks</li>
+           <li>Used problem-solving skills to alleviate issues efficiently with minimal supervision.</li>
+           <li>Followed safety precautions to avoid personal injury and provide safe work environment.</li>
+           <li>Replaced light bulbs in indoor and outdoor fixtures and checked smoke and carbon monoxide detectors for proper functionality.</li>
+        </ul>
+            
+        </div>
+ </div>
+
+
+ <h2 id="edujump">Education</h2>
+
+ <div id="educontainer">
+ <p class="eduele">Expected in 05/2023 | <strong>Web Development, Associates Degree: IT</strong> - Delaware County Community College - Media, PA</p>
+ <ul class="edulist">
+    <li>Honor Roll</li>
+    <li>3.6 GPA</li>
+</ul>
+
+<p class="eduele">Completed 06/2019 | <strong>Information Technology, Web Programming, Certificate of Competency (CSWP)</strong> - Delaware County Community College - Media, PA </p>
+<ul class="edulist">
+    <li>Honor Roll</li>
+    <li>3.6 GPA</li>
+
+</ul>
+
+<p class="eduele">Completed 05/2022 | <strong>ServSafe Food Handler Certification: Food Safety</strong> - Online Course </p>
+
+
+
+<div style="overflow-x:auto;">
+<table>
+    <tr>
+        <th>Area of Study</th>
+        <th>School</th>
+        <th>Type</th>
+        <th>Percent Completed</th>
+        <th>Progress</th>
+    </tr>
+
+    <tr>
+        <td>Web Programming</td>
+        <td>DCCC</td>
+        <td>Certification</td>
+        <td>100%</td>
+        <td><meter id="" min="0" max="100" low="33" high="66" optimum="80"value="100"></meter></td>
+        
+    </tr>
+
+    <tr>
+        <td>Web Development</td>
+        <td>DCCC</td>
+        <td>Associates Degree</td>
+        <td>75%</td>
+        <td><meter id="" min="0" max="100" low="33" high="66" optimum="80"value="75"></meter></td>
+        
+    </tr>
+  
+    <tr>
+        <td>Computer Science</td>
+        <td>DCCC</td>
+        <td>Associates Degree</td>
+        <td>50%</td>
+        <td><meter id="" min="0" max="100" low="33" high="66" optimum="80"value="50"></meter></td>
+        
+    </tr>
+</table>
+<!-- <progress id="file" value="75" max="100"> 32% </progress> -->
+</div>
+</div>
+
+<h2 id="contactjump">Contact Me</h2>
+
+<div class="contactformdiv">
+<form method="get" action="mailto:mhluber@mac.com" enctype="text/plain">
+    <div class="row">
+    <label for="email">Subject</label>
+    <input type="text" name="subject" placeholder="Reason for contacting" id="subject_input">
+    </div>
+    <div class="row">
+    <label for="email">Your Message</label>
+    <textarea name="body" placeholder="Your Message" id="message_input"></textarea>
+    </div>
+    <div class="row">
+        <div class="submitdiv">
+    <input type="submit" value="Submit">
+    </div>
+    </div>
+  </form>
+</div>
+
+<hr style="margin-top: 20px">
+
+<footer>Mark Luber 2022 &copy <span id="displayDate"></span></footer>
+
+
+<script>
+    const curDate = new Date().toLocaleDateString();
+    document.getElementById("displayDate").innerHTML = curDate;
+</script>
+
+<!-- <div class="fixed">Contact Me</div> -->
+
+</body>
+</html>
