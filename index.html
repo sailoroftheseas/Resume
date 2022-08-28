@@ -490,6 +490,30 @@
 
     }
 
+    .printbutton {
+        background-color: #00dbdf;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        /* float: right; */
+        width: 20%;
+        font-family: Ubuntu, sans-serif;
+        margin-top: 10px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+    }
+
+    .printbutton:hover {
+        background-color: #00cbce;
+    }
+
     footer {
 
         text-align: center;
@@ -504,16 +528,80 @@
 
     }
 
-    @media screen and (max-width: 1000px) {
-  
-        ul.skillsul {
+@media screen and (max-width: 992px) {
+
+    * {
+
+            font-size: 30px;
+
+    }
+
+
+    h1 {
+
+        font-size: 40px;
+
+    }
+
+    .dropbtn {
+            
+            background-color: #00dbdf;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 25px;
+            z-index: 1;
+            margin-right: 10px;
+    
+        }
+    
+        .dropdown {
+            position: absolute;
+            display: inline-block;
+            right: 0;
+            margin-right: 10px;
+        }
+    
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+    
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+    
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    
+        .dropdown:hover .dropbtn {
+            background-color: #00cbce;
+        }
+
+    
+    ul.skillsul {
 
         display: inline-block;
         text-align: left;
         
-        }
+    }
 
-     div.skillscontainer {
+    div.skillscontainer {
         text-align: center;
         /* background-color: lightgrey; */
         margin-left: 10px;
@@ -544,6 +632,26 @@
     
     div.workhistsection {
         text-align: center;
+    }
+
+    .printbutton {
+        background-color: #00dbdf;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        /* float: right; */
+        width: 40%;
+        font-family: Ubuntu, sans-serif;
+        margin-top: 10px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
     }
 }
 
@@ -632,7 +740,7 @@
             <li>Gathered and disposed of worksite debris to remove safety hazards.</li>
         </ul>
     
-        <p class="workhistele">07/2020 to 01/2021 |<strong class="bolderfont">Chimney Technician</strong> - Tony's Chimney Care - Downingtown, PA</p>
+        <p class="workhistele">07/2020 to 01/2021 | <strong class="bolderfont">Chimney Technician</strong> - Tony's Chimney Care - Downingtown, PA</p>
 
         <ul class="workhistul">
             <li>Specialized in stucco and masonry repair</li>
@@ -777,6 +885,10 @@
     </div>
   </form>
 </div>
+
+<hr style="margin-top: 20px; margin-bottom: 20px;">
+
+<button class="printbutton" onclick="window.print()">Print this page</button>
 
 <hr style="margin-top: 20px">
 
